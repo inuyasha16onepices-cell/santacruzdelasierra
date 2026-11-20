@@ -1,0 +1,9 @@
+PROYECTO: Santa Cruz de la Sierra
+
+Archivos:
+- index.html: estructura y contenido de la página.
+- css/estilos.css: estilos CSS personalizados.
+- js/script.js: funciones interactivas en JavaScript.
+
+Para ver la página, abre index.html en un navegador.
+La página utiliza Tailwind CSS y la fuente Inter desde internet.

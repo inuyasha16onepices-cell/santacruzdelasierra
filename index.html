@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Cruz de la Sierra - Tierra de Progreso y Tradición</title>
+    <!-- Cargamos Tailwind CSS para utilidades responsivas y fuente Inter -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Estilos CSS personalizados con la paleta Verde, Blanco y Verde -->
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="antialiased selection:bg-[#007A33] selection:text-white">
+
+    <!-- Barra de Navegación (Menú de Santa Cruz) -->
+    <header class="sticky top-0 z-50 shadow-md bg-white border-b-4 border-[#007A33]">
+        <!-- Franja superior verde -->
+        <div class="h-2 w-full bg-[#007A33]"></div>
+        
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo del Zorrito, Bandera y Nombre de la Autora -->
+                <div class="flex items-center space-x-3">
+                    <!-- Logo ilustrado del zorrito en SVG (basado en zorrito bb.jpeg) -->
+                    <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-[#007A33] bg-white shadow-sm flex-shrink-0 flex items-center justify-center p-0.5">
+                        <svg viewBox="0 0 200 200" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Círculo exterior naranja -->
+                            <circle cx="100" cy="100" r="90" fill="#FFFFFF" stroke="#F26522" stroke-width="6"/>
+                            <!-- Llamas laterales decorativas -->
+                            <path d="M18 125 Q12 95 28 75 Q24 100 35 115 Q32 95 42 85 Q38 115 48 145 Z" fill="#F26522"/>
+                            <path d="M182 125 Q188 95 172 75 Q176 100 165 115 Q168 95 158 85 Q162 115 152 145 Z" fill="#F26522"/>
+                            <!-- Orejas del zorro -->
+                            <polygon points="75,65 72,18 102,52" fill="#F26522" stroke="#1E1025" stroke-width="4" stroke-linejoin="round"/>
+                            <polygon points="78,58 76,28 95,50" fill="#1E1025"/>
+                            <polygon points="105,52 132,16 132,68" fill="#F26522" stroke="#1E1025" stroke-width="4" stroke-linejoin="round"/>
+                            <polygon points="112,50 127,26 127,58" fill="#FFFFFF"/>
+                            <!-- Cabeza y hocico -->
+                            <path d="M72 60 Q100 42 132 62 Q142 88 122 105 Q100 112 76 102 Q58 95 52 86 Q64 78 72 60 Z" fill="#F26522" stroke="#1E1025" stroke-width="4"/>
+                            <!-- Mejilla blanca -->
+                            <path d="M54 87 Q76 86 92 98 Q106 106 120 100 Q102 114 76 104 Q60 98 54 87 Z" fill="#FFFFFF"/>
+                            <!-- Nariz y ojo -->
+                            <circle cx="52" cy="86" r="5" fill="#1E1025"/>
+                            <path d="M78 72 Q86 68 93 74 Q85 77 78 72 Z" fill="#1E1025"/>
+                            <!-- Cuerpo y pecho blanco -->
+                            <path d="M82 104 Q65 135 72 165 L132 165 Q138 130 120 102 Z" fill="#F26522" stroke="#1E1025" stroke-width="4"/>
+                            <path d="M84 104 L92 125 L98 112 L104 128 L112 112 L118 122 L120 103 Q102 112 84 104 Z" fill="#FFFFFF"/>
+                            <path d="M86 115 Q102 145 116 115 Q112 148 101 155 Q90 148 86 115 Z" fill="#FFFFFF"/>
+                            <!-- Cola envolvente -->
+                            <path d="M128 148 Q168 145 162 170 Q135 192 75 188 Q28 182 32 155 Q36 135 68 142 Q95 152 128 148 Z" fill="#F26522" stroke="#1E1025" stroke-width="4"/>
+                            <!-- Punta blanca de la cola -->
+                            <path d="M115 162 Q142 156 158 164 Q142 182 105 182 Q115 172 115 162 Z" fill="#FFFFFF"/>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="flex items-center space-x-2">
+                            <span class="font-extrabold text-lg sm:text-xl text-[#007A33] tracking-tight leading-none">
+                                SANTA CRUZ
+                            </span>
+                            <!-- Mini Bandera Verde Blanco Verde -->
+                            <div class="w-6 h-4 rounded-sm overflow-hidden border border-gray-300 flex flex-col">
+                                <div class="h-1/3 bg-[#007A33]"></div>
+                                <div class="h-1/3 bg-white"></div>
+                                <div class="h-1/3 bg-[#007A33]"></div>
+                            </div>
+                        </div>
+                        <span class="text-xs sm:text-sm font-bold text-gray-700 mt-0.5">
+                            Martha Eliana Diego Ticona
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Menú de escritorio -->
+                <div class="hidden md:flex space-x-6 lg:space-x-8">
+                    <a href="#inicio" class="text-gray-700 hover:text-[#007A33] font-semibold transition">Inicio</a>
+                    <a href="#historia" class="text-gray-700 hover:text-[#007A33] font-semibold transition">Reseña Histórica</a>
+                    <a href="#comidas" class="text-gray-700 hover:text-[#007A33] font-semibold transition">Comidas Típicas</a>
+                    <a href="#curiosidades" class="text-gray-700 hover:text-[#007A33] font-semibold transition">Curiosidades</a>
+                    <a href="#galeria" class="text-gray-700 hover:text-[#007A33] font-semibold transition">Galería</a>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-[#007A33] hover:text-[#005A24] focus:outline-none p-2 rounded-lg" aria-label="Abrir menú">
+                        <svg class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Menú desplegable móvil -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4 space-y-2 border-t border-gray-100 pt-2">
+                <a href="#inicio" class="block px-3 py-2 rounded-md text-base font-semibold text-gray-800 hover:bg-[#E6F4EA] hover:text-[#007A33]">Inicio</a>
+                <a href="#historia" class="block px-3 py-2 rounded-md text-base font-semibold text-gray-800 hover:bg-[#E6F4EA] hover:text-[#007A33]">Reseña Histórica</a>
+                <a href="#comidas" class="block px-3 py-2 rounded-md text-base font-semibold text-gray-800 hover:bg-[#E6F4EA] hover:text-[#007A33]">Comidas Típicas</a>
+                <a href="#curiosidades" class="block px-3 py-2 rounded-md text-base font-semibold text-gray-800 hover:bg-[#E6F4EA] hover:text-[#007A33]">Curiosidades</a>
+                <a href="#galeria" class="block px-3 py-2 rounded-md text-base font-semibold text-gray-800 hover:bg-[#E6F4EA] hover:text-[#007A33]">Galería</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección Hero (Portada Verde, Blanco, Verde) -->
+    <section id="inicio" class="relative overflow-hidden">
+        <!-- Franja Verde Superior -->
+        <div class="bg-[#007A33] text-white py-12 px-4 text-center">
+            <span class="uppercase tracking-widest text-xs sm:text-sm font-bold bg-white/20 px-4 py-1 rounded-full">
+                Bolivia • Corazón de Sudamérica
+            </span>
+            <h1 class="mt-4 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+                Santa Cruz de la Sierra
+            </h1>
+        </div>
+
+        <!-- Franja Blanca Central con Contenido Principal -->
+        <div class="bg-white py-10 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto text-center">
+            <p class="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed font-medium">
+                "Es ley del cruceño la hospitalidad". Descubre la historia, la cultura vibrante, la arquitectura de los anillos y la riqueza natural de la tierra camba bajo los colores de nuestra gloriosa bandera: <strong class="text-[#007A33]">Verde, Blanco y Verde</strong>.
+            </p>
+            <div class="mt-8 flex flex-wrap justify-center gap-4">
+                <a href="#historia" class="btn-cruceno px-6 py-3 rounded-xl font-bold shadow-lg">
+                    Explorar Historia
+                </a>
+                <a href="#curiosidades" class="bg-white text-[#007A33] border-2 border-[#007A33] hover:bg-[#E6F4EA] px-6 py-3 rounded-xl font-bold transition">
+                    Ver Curiosidades
+                </a>
+            </div>
+        </div>
+
+        <!-- Franja Verde Inferior -->
+        <div class="bg-[#007A33] py-6 px-4 text-center text-white">
+            <p class="text-sm sm:text-base font-semibold tracking-wide">
+                🌿 Selva exuberante • 🤍 Pureza y nobleza • 🌿 Esperanza y progreso
+            </p>
+        </div>
+    </section>
+
+    <!-- Sección 1: Reseña Histórica -->
+    <section id="historia" class="py-16 px-4 sm:px-6 lg:px-8 bg-[#F8FAF9]">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-[#007A33]">Reseña Histórica de Santa Cruz</h2>
+                <div class="w-24 h-1.5 bg-[#007A33] mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <!-- Columna de Imagen Histórica -->
+                <div class="lg:col-span-5">
+                    <div class="rounded-2xl overflow-hidden shadow-xl border-4 border-[#007A33] bg-white">
+                        <img 
+                            src="assets/catedral.jpeg" 
+                            alt="Catedral Metropolitana Basílica de San Lorenzo en Santa Cruz" 
+                            class="w-full h-80 object-cover"
+                            onerror="this.src='https://placehold.co/800x600/007A33/FFFFFF?text=Catedral+de+Santa+Cruz'"
+                        >
+                        <div class="p-4 bg-white text-center border-t-2 border-[#007A33]">
+                            <p class="text-sm font-bold text-[#007A33]">Catedral Basílica Menor de San Lorenzo</p>
+                            <p class="text-xs text-gray-500">Plaza 24 de Septiembre, centro histórico de la ciudad</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna de Texto Histórico -->
+                <div class="lg:col-span-7 space-y-5 bg-white p-6 sm:p-8 rounded-2xl shadow-md border-l-8 border-[#007A33]">
+                    <h3 class="text-2xl font-bold text-gray-900">De la Chiquitania al Río Piraí</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        La historia de Santa Cruz de la Sierra comienza el <strong class="text-[#007A33]">26 de febrero de 1561</strong>, cuando el capitán español <strong>Ñuflo de Chaves</strong> fundó la ciudad a orillas del arroyo Sutó, en la serranía de Chiquitos (hoy San José de Chiquitos), bautizándola en honor a su tierra natal en Extremadura, España.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Debido a los constantes conflictos con los pueblos originarios de la zona y el aislamiento geográfico, la ciudad tuvo que trasladarse en dos ocasiones. Finalmente, hacia finales del siglo XVI (alrededor de 1592-1595), se fusionó con la población de San Lorenzo de la Barranca, estableciéndose definitivamente en las llanuras fértiles junto al <strong class="text-[#007A33]">río Piraí</strong>.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        El <strong class="text-[#007A33]">24 de septiembre de 1810</strong>, los patriotas cruceños liderados por Antonio Vicente Seoane, José Manuel Lemoine y el coronel Antonio Suárez dieron el grito libertario, marcando el inicio de la lucha por la independencia. Hoy, Santa Cruz es el motor económico, agroindustrial y cultural más dinámico de Bolivia.
+                    </p>
+                    
+                    <!-- Línea de tiempo rápida -->
+                    <div class="grid grid-cols-3 gap-3 pt-4 border-t border-gray-200 text-center">
+                        <div class="p-3 bg-[#E6F4EA] rounded-xl">
+                            <span class="block font-extrabold text-[#007A33] text-lg">1561</span>
+                            <span class="text-xs font-semibold text-gray-700">Fundación</span>
+                        </div>
+                        <div class="p-3 bg-white border border-[#007A33] rounded-xl">
+                            <span class="block font-extrabold text-[#007A33] text-lg">1810</span>
+                            <span class="text-xs font-semibold text-gray-700">Grito Libertario</span>
+                        </div>
+                        <div class="p-3 bg-[#E6F4EA] rounded-xl">
+                            <span class="block font-extrabold text-[#007A33] text-lg">1864</span>
+                            <span class="text-xs font-semibold text-gray-700">Creación Bandera</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Nueva: Menú de Comidas Típicas de Santa Cruz -->
+    <section id="comidas" class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-sm font-bold uppercase tracking-wider text-[#007A33]">Gastronomía Camba</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-1">Menú de Comidas Típicas Cruceñas</h2>
+                <div class="w-24 h-1.5 bg-[#007A33] mx-auto mt-3 rounded-full"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                    Sabores tradicionales preparados con ingredientes de nuestra tierra: yuca, maíz, plátano, charque y queso criollo.
+                </p>
+            </div>
+
+            <!-- Filtros interactivos del Menú de Comidas -->
+            <div class="flex flex-wrap justify-center gap-3 mb-10" id="filtros-comida">
+                <button data-categoria="todos" class="filtro-btn bg-[#007A33] text-white px-5 py-2.5 rounded-full font-bold text-sm shadow transition">
+                    Todos los Platos
+                </button>
+                <button data-categoria="plato-fuerte" class="filtro-btn bg-[#E6F4EA] text-[#007A33] hover:bg-[#007A33] hover:text-white px-5 py-2.5 rounded-full font-bold text-sm transition">
+                    Platos Fuertes
+                </button>
+                <button data-categoria="horneados" class="filtro-btn bg-[#E6F4EA] text-[#007A33] hover:bg-[#007A33] hover:text-white px-5 py-2.5 rounded-full font-bold text-sm transition">
+                    Horneados y Cafecito
+                </button>
+                <button data-categoria="bebidas" class="filtro-btn bg-[#E6F4EA] text-[#007A33] hover:bg-[#007A33] hover:text-white px-5 py-2.5 rounded-full font-bold text-sm transition">
+                    Bebidas Típicas
+                </button>
+            </div>
+
+            <!-- Grid del Menú Gastronómico -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="grid-comidas">
+                
+                <!-- Plato 1: Majadito -->
+                <div class="plato-card bg-[#F8FAF9] rounded-2xl overflow-hidden shadow-md border-2 border-[#007A33] flex flex-col justify-between transition hover:-translate-y-1" data-categoria="plato-fuerte">
+                    <div>
+                        <img 
+                            src="https://folkloreboliviano.org/resources/media/gastronomy/full/0356b2e8e8ac29a206670648e6a95433.jpg" 
+                            alt="Majadito Cruceño" 
+                            class="w-full h-48 object-cover"
+                            onerror="this.src='https://placehold.co/800x500/007A33/FFFFFF?text=Majadito+Cruceno'"
+                        >
+                        <div class="p-5">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-xs font-bold uppercase text-white bg-[#007A33] px-2.5 py-1 rounded-full">Plato Fuerte</span>
+                                <span class="font-extrabold text-[#007A33]">Bs. 25</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Majadito de Charque</h3>
+                            <p class="mt-2 text-sm text-gray-600 leading-relaxed">
+                                Arroz graneado o batido preparado con charque (carne deshidratada), urucú, acompañado de huevo frito, plátano maduro frito y ensalada.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-5 py-3 bg-white border-t border-gray-200 text-xs font-semibold text-[#007A33]">
+                        🍽️ El plato bandera de Santa Cruz
+                    </div>
+                </div>
+
+                <!-- Plato 2: Locro -->
+                <div class="plato-card bg-[#F8FAF9] rounded-2xl overflow-hidden shadow-md border-2 border-[#007A33] flex flex-col justify-between transition hover:-translate-y-1" data-categoria="plato-fuerte">
+                    <div>
+                        <img 
+                            src="https://rapirecetas.com/assets/images/2025/11/locro-de-gallina-boliviano_800x534.webp" 
+                            alt="Locro de Gallina Criolla" 
+                            class="w-full h-48 object-cover"
+                            onerror="this.src='https://placehold.co/800x500/007A33/FFFFFF?text=Locro+de+Gallina'"
+                        >
+                        <div class="p-5">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-xs font-bold uppercase text-white bg-[#007A33] px-2.5 py-1 rounded-full">Plato Fuerte</span>
+                                <span class="font-extrabold text-[#007A33]">Bs. 28</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Locro de Gallina Criolla</h3>
+                            <p class="mt-2 text-sm text-gray-600 leading-relaxed">
+                                Caldo sustancioso a base de arroz, presas de gallina criolla, plátano verde, cebollín y un toque de urucú. Reconfortante y tradicional.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-5 py-3 bg-white border-t border-gray-200 text-xs font-semibold text-[#007A33]">
+                        🍲 Tradición de campo cruceño
+                    </div>
+                </div>
+
+                <!-- Plato 3: Keperí -->
+                <div class="plato-card bg-[#F8FAF9] rounded-2xl overflow-hidden shadow-md border-2 border-[#007A33] flex flex-col justify-between transition hover:-translate-y-1" data-categoria="plato-fuerte">
+                    <div>
+                        <img 
+                            src="https://4.bp.blogspot.com/-J3riymi531Y/VR79A6ywOII/AAAAAAAAAHY/Rfl0icf2ENY/s1600/KEPERI.JPG" 
+                            alt="Keperí al Horno" 
+                            class="w-full h-48 object-cover"
+                            onerror="this.src='https://placehold.co/800x500/007A33/FFFFFF?text=Keperi+Cruceno'"
+                        >
+                        <div class="p-5">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-xs font-bold uppercase text-white bg-[#007A33] px-2.5 py-1 rounded-full">Plato Fuerte</span>
+                                <span class="font-extrabold text-[#007A33]">Bs. 35</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Keperí al Horno</h3>
+                            <p class="mt-2 text-sm text-gray-600 leading-relaxed">
+                                Corte jugoso de carne de res sazonado con limón, ajo y especias, horneado lentamente y servido con arroz con queso y yuca cocida.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-5 py-3 bg-white border-t border-gray-200 text-xs font-semibold text-[#007A33]">
+                        🥩 Suave y jugoso al estilo camba
+                    </div>
+                </div>
+
+                <!-- Plato 4: Sonso de Yuca -->
+                <div class="plato-card bg-[#F8FAF9] rounded-2xl overflow-hidden shadow-md border-2 border-[#007A33] flex flex-col justify-between transition hover:-translate-y-1" data-categoria="horneados">
+                    <div>
+                        <img 
+                            src="https://recettes.de/images/blogs/196-flavors/bolivie-sonso-de-yuca.640x480.jpg" 
+                            alt="Sonso de Yuca y Cuñapé" 
+                            class="w-full h-48 object-cover"
+                            onerror="this.src='https://placehold.co/800x500/007A33/FFFFFF?text=Sonso+y+Cunape'"
+                        >
+                        <div class="p-5">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-xs font-bold uppercase text-[#007A33] bg-[#E6F4EA] px-2.5 py-1 rounded-full">Horneados</span>
+                                <span class="font-extrabold text-[#007A33]">Bs. 12</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Sonso de Yuca y Cuñapé</h3>
+                            <p class="mt-2 text-sm text-gray-600 leading-relaxed">
+                                Puré de yuca mezclado con abundante queso criollo, asado a la brasa o al horno. Acompañado de cuñapés calientitos de almidón de yuca.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-5 py-3 bg-white border-t border-gray-200 text-xs font-semibold text-[#007A33]">
+                        ☕ Ideal para el cafecito de la tarde
+                    </div>
+                </div>
+
+                <!-- Plato 5: Masaco de Plátano -->
+                <div class="plato-card bg-[#F8FAF9] rounded-2xl overflow-hidden shadow-md border-2 border-[#007A33] flex flex-col justify-between transition hover:-translate-y-1" data-categoria="horneados">
+                    <div>
+                        <img 
+                            src="https://cdn.bolivia.com/gastronomia/2015/11/24/masaco-de-platano-con-queso-3290.jpg" 
+                            alt="Masaco de Plátano con Queso" 
+                            class="w-full h-48 object-cover"
+                            onerror="this.src='https://placehold.co/800x500/007A33/FFFFFF?text=Masaco+Cruceno'"
+                        >
+                        <div class="p-5">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-xs font-bold uppercase text-[#007A33] bg-[#E6F4EA] px-2.5 py-1 rounded-full">Horneados</span>
+                                <span class="font-extrabold text-[#007A33]">Bs. 15</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Masaco de Plátano o Yuca</h3>
+                            <p class="mt-2 text-sm text-gray-600 leading-relaxed">
+                                Plátano verde o yuca cocida molida en tacú junto con queso criollo o chicharrón de cerdo. Un clásico infaltable en el desayuno cruceño.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-5 py-3 bg-white border-t border-gray-200 text-xs font-semibold text-[#007A33]">
+                        🍌 Preparado tradicionalmente en tacú
+                    </div>
+                </div>
+
+                <!-- Plato 6: Mocochinchi y Somó -->
+                <div class="plato-card bg-[#F8FAF9] rounded-2xl overflow-hidden shadow-md border-2 border-[#007A33] flex flex-col justify-between transition hover:-translate-y-1" data-categoria="bebidas">
+                    <div>
+                        <img 
+                            src="https://losimperdonables.com/images/sono.jpg" 
+                            alt="Refrescos Típicos Somó y Mocochinchi" 
+                            class="w-full h-48 object-cover"
+                            onerror="this.src='https://placehold.co/800x500/007A33/FFFFFF?text=Somo+y+Mocochinchi'"
+                        >
+                        <div class="p-5">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-xs font-bold uppercase text-[#007A33] bg-[#E6F4EA] px-2.5 py-1 rounded-full">Bebidas Típicas</span>
+                                <span class="font-extrabold text-[#007A33]">Bs. 8</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900">Somó y Mocochinchi</h3>
+                            <p class="mt-2 text-sm text-gray-600 leading-relaxed">
+                                Bebidas refrescantes bien frías: el Somó elaborado con maíz frangollo, canela y clavo de olor, y el Mocochinchi de durazno deshidratado.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-5 py-3 bg-white border-t border-gray-200 text-xs font-semibold text-[#007A33]">
+                        🥤 Refrescantes para el calor cruceño
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 2: Curiosidades de Santa Cruz (Con botón interactivo) -->
+    <section id="curiosidades" class="py-16 px-4 sm:px-6 lg:px-8 borde-bandera">
+        <div class="max-w-5xl mx-auto text-center">
+            <span class="text-sm font-bold uppercase tracking-wider text-[#007A33]">¿Sabías qué?</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-1">Curiosidades de Santa Cruz</h2>
+            <p class="mt-3 text-gray-600 max-w-2xl mx-auto">
+                Haz clic en el botón verde para desplegar o ocultar la lista de datos fascinantes que hacen única a nuestra tierra cruceña.
+            </p>
+
+            <!-- Botón Principal Interactivo solicitado -->
+            <div class="mt-8">
+                <button 
+                    id="toggle-curiosidades-btn" 
+                    class="btn-cruceno inline-flex items-center space-x-3 px-8 py-4 rounded-2xl font-bold text-lg shadow-xl cursor-pointer"
+                >
+                    <svg id="btn-icon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                    <span id="btn-text">Mostrar Curiosidades de Santa Cruz</span>
+                </button>
+            </div>
+
+            <!-- Lista de Curiosidades (Desplegable mediante JavaScript) -->
+            <div id="lista-curiosidades" class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 text-left transition-all duration-500">
+                
+                <!-- Curiosidad 1: Ciudad de los Anillos -->
+                <div class="curiosidad-card bg-white rounded-2xl p-6 shadow-md border-t-4 border-[#007A33] flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-3">
+                            <span class="w-10 h-10 rounded-full bg-[#007A33] text-white flex items-center justify-center font-bold text-lg">1</span>
+                            <h3 class="text-xl font-bold text-[#007A33]">Ciudad de los Anillos</h3>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            Su diseño urbano está organizado en <strong>avenidas circulares llamadas anillos</strong>, conectados por avenidas radales que parten desde el centro histórico (Casco Viejo), inspirado en el plan urbanístico del Techint en la década de 1960.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-gray-100 flex items-center text-xs font-semibold text-[#007A33]">
+                        <span>📍 Urbanismo único en Sudamérica</span>
+                    </div>
+                </div>
+
+                <!-- Curiosidad 2: Su Fundación -->
+                <div class="curiosidad-card bg-white rounded-2xl p-6 shadow-md border-t-4 border-[#007A33] flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-3">
+                            <span class="w-10 h-10 rounded-full bg-[#007A33] text-white flex items-center justify-center font-bold text-lg">2</span>
+                            <h3 class="text-xl font-bold text-[#007A33]">Su Fundación</h3>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            Fue fundada el <strong>26 de febrero de 1561</strong> por el capitán español <strong>Ñuflo de Chaves</strong> a orillas del arroyo Sutó, en la serranía de Chiquitos, antes de trasladarse a su ubicación actual cerca del río Piraí.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-gray-100 flex items-center text-xs font-semibold text-[#007A33]">
+                        <span>⚔️ Más de 460 años de historia</span>
+                    </div>
+                </div>
+
+                <!-- Curiosidad 3: Bandera Cruceña -->
+                <div class="curiosidad-card bg-white rounded-2xl p-6 shadow-md border-t-4 border-[#007A33] flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-3">
+                            <span class="w-10 h-10 rounded-full bg-[#007A33] text-white flex items-center justify-center font-bold text-lg">3</span>
+                            <h3 class="text-xl font-bold text-[#007A33]">Bandera Cruceña</h3>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed mb-3">
+                            Creada el 24 de julio de 1864 por el Dr. Tristán Roca. El significado de cada franja (<strong class="text-[#007A33]">Verde - Blanco - Verde</strong>) representa:
+                        </p>
+                        <ul class="space-y-1.5 text-sm text-gray-700 bg-[#F8FAF9] p-3 rounded-xl border border-gray-200">
+                            <li class="flex items-center"><span class="w-3 h-3 rounded-full bg-[#007A33] mr-2"></span><strong>Verde superior:</strong> La riqueza de nuestras selvas y bosques.</li>
+                            <li class="flex items-center"><span class="w-3 h-3 rounded-full bg-white border border-gray-400 mr-2"></span><strong>Blanco central:</strong> La pureza, hidalguía y nobleza de su gente.</li>
+                            <li class="flex items-center"><span class="w-3 h-3 rounded-full bg-[#007A33] mr-2"></span><strong>Verde inferior:</strong> La esperanza de un futuro próspero.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Curiosidad 4: El Tajibo -->
+                <div class="curiosidad-card bg-white rounded-2xl p-6 shadow-md border-t-4 border-[#007A33] flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-3">
+                            <span class="w-10 h-10 rounded-full bg-[#007A33] text-white flex items-center justify-center font-bold text-lg">4</span>
+                            <h3 class="text-xl font-bold text-[#007A33]">El Tajibo</h3>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            El <strong>Tajibo</strong> es el árbol emblemático de Santa Cruz que, entre los meses de agosto y octubre, llena las avenidas, plazas y parques de vibrantes <strong>flores amarillas, rosadas y blancas</strong>, anunciando la llegada de la primavera.
+                        </p>
+                    </div>
+                    <div class="mt-4 pt-3 border-t border-gray-100 flex items-center text-xs font-semibold text-[#007A33]">
+                        <span>🌸 Espectáculo natural de primavera</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 3: Galería de Imágenes (Más imágenes de Santa Cruz) -->
+    <section id="galeria" class="py-16 px-4 sm:px-6 lg:px-8 bg-[#007A33] text-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Postales de Santa Cruz</h2>
+                <div class="w-24 h-1.5 bg-white mx-auto mt-3 rounded-full"></div>
+                <p class="mt-4 text-green-100 max-w-2xl mx-auto">
+                    Un recorrido visual por los paisajes, monumentos y flora que enorgullecen a todo cruceño.
+                </p>
+            </div>
+
+            <!-- Grid de Imágenes con marco blanco (Verde - Blanco - Verde) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Tarjeta Imagen 1: Tajibos en flor -->
+                <div class="bg-white text-gray-800 rounded-2xl overflow-hidden shadow-xl transform transition hover:-translate-y-2">
+                    <img 
+                        src="https://pbs.twimg.com/media/EALh1bYWkAAx8dZ.jpg" 
+                        alt="Árboles floreciendo en Santa Cruz" 
+                        class="w-full h-56 object-cover"
+                        onerror="this.src='https://placehold.co/800x500/007A33/FFFFFF?text=Tajibos+en+Primavera'"
+                    >
+                    <div class="p-5">
+                        <span class="text-xs font-bold uppercase text-[#007A33] bg-[#E6F4EA] px-2.5 py-1 rounded-full">Flora Emblemática</span>
+                        <h3 class="mt-2 text-xl font-bold">Tajibos en Flor</h3>
+                        <p class="mt-1 text-sm text-gray-600">Sus copas amarillas y rosadas tiñen las avenidas de los anillos cruceños.</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Imagen 2: Naturaleza y Selva -->
+                <div class="bg-white text-gray-800 rounded-2xl overflow-hidden shadow-xl transform transition hover:-translate-y-2">
+                    <img 
+                        src="https://static.seeker.io/media/img/1/c0ae9472-d810-46f8-ab73-31badce035de-1400.jpg" 
+                        alt="Selva y bosques de Santa Cruz" 
+                        class="w-full h-56 object-cover"
+                        onerror="this.src='https://placehold.co/800x500/007A33/FFFFFF?text=Parques+Naturales+Amboro'"
+                    >
+                    <div class="p-5">
+                        <span class="text-xs font-bold uppercase text-[#007A33] bg-[#E6F4EA] px-2.5 py-1 rounded-full">Biodiversidad</span>
+                        <h3 class="mt-2 text-xl font-bold">Parques y Selvas</h3>
+                        <p class="mt-1 text-sm text-gray-600">Hogar del Parque Nacional Amboró y Noel Kempff Mercado, pulmones verdes de Bolivia.</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Imagen 3: Arquitectura Moderna y Anillos -->
+                <div class="bg-white text-gray-800 rounded-2xl overflow-hidden shadow-xl transform transition hover:-translate-y-2">
+                    <img 
+                        src="https://i.imgur.com/VTpZX8t.jpg" 
+                        alt="Desarrollo moderno de Santa Cruz" 
+                        class="w-full h-56 object-cover"
+                        onerror="this.src='https://placehold.co/800x500/007A33/FFFFFF?text=Ciudad+Moderna+Anillos'"
+                    >
+                    <div class="p-5">
+                        <span class="text-xs font-bold uppercase text-[#007A33] bg-[#E6F4EA] px-2.5 py-1 rounded-full">Progreso</span>
+                        <h3 class="mt-2 text-xl font-bold">Metrópoli de los Anillos</h3>
+                        <p class="mt-1 text-sm text-gray-600">El crecimiento económico y arquitectónico más dinámico del país.</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Imagen 4: Misiones Jesuíticas -->
+                <div class="bg-white text-gray-800 rounded-2xl overflow-hidden shadow-xl transform transition hover:-translate-y-2">
+                    <img 
+                        src="https://elpais.bo/img/images_640/contents/2017/08/31/772d7adc726a459de97dae53bde21578_XL.jpg" 
+                        alt="Arquitectura colonial y misional" 
+                        class="w-full h-56 object-cover"
+                        onerror="this.src='https://placehold.co/800x500/007A33/FFFFFF?text=Misiones+Jesuiticas+Chiquitos'"
+                    >
+                    <div class="p-5">
+                        <span class="text-xs font-bold uppercase text-[#007A33] bg-[#E6F4EA] px-2.5 py-1 rounded-full">Patrimonio</span>
+                        <h3 class="mt-2 text-xl font-bold">Chiquitania Viva</h3>
+                        <p class="mt-1 text-sm text-gray-600">Las Misiones Jesuíticas de Chiquitos, Patrimonio Cultural de la Humanidad.</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Imagen 5: Samaipata y Valles -->
+                <div class="bg-white text-gray-800 rounded-2xl overflow-hidden shadow-xl transform transition hover:-translate-y-2">
+                    <img 
+                        src="https://images.daytrip.com/samaipata1.jpg" 
+                        alt="Paisaje de los valles cruceños" 
+                        class="w-full h-56 object-cover"
+                        onerror="this.src='https://placehold.co/800x500/007A33/FFFFFF?text=Valles+Crucenos+Samaipata'"
+                    >
+                    <div class="p-5">
+                        <span class="text-xs font-bold uppercase text-[#007A33] bg-[#E6F4EA] px-2.5 py-1 rounded-full">Turismo</span>
+                        <h3 class="mt-2 text-xl font-bold">Valles Cruceños</h3>
+                        <p class="mt-1 text-sm text-gray-600">Clima templado, montañas verdes y el histórico Fuerte de Samaipata.</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta Imagen 6: Símbolos Patrios -->
+                <div class="bg-white text-gray-800 rounded-2xl overflow-hidden shadow-xl transform transition hover:-translate-y-2 flex flex-col">
+                    <!-- Representación visual de la bandera cruceña -->
+                    <div class="w-full h-56 flex flex-col border-b border-gray-200">
+                        <div class="h-1/3 bg-[#007A33] flex items-center justify-center text-white font-bold tracking-widest text-sm">SELVA Y RIQUEZA</div>
+                        <div class="h-1/3 bg-white flex items-center justify-center text-[#007A33] font-extrabold tracking-widest text-lg">SANTA CRUZ</div>
+                        <div class="h-1/3 bg-[#007A33] flex items-center justify-center text-white font-bold tracking-widest text-sm">ESPERANZA</div>
+                    </div>
+                    <div class="p-5">
+                        <span class="text-xs font-bold uppercase text-[#007A33] bg-[#E6F4EA] px-2.5 py-1 rounded-full">Identidad</span>
+                        <h3 class="mt-2 text-xl font-bold">Verde, Blanco y Verde</h3>
+                        <p class="mt-1 text-sm text-gray-600">Los tres colores que flamean con orgullo en cada hogar cruceño.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página (Footer Verde, Blanco, Verde) -->
+    <footer class="bg-white border-t-4 border-[#007A33]">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <!-- Logo del Zorrito en el footer -->
+                <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-[#007A33] bg-white flex items-center justify-center p-0.5">
+                    <svg viewBox="0 0 200 200" class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="100" cy="100" r="90" fill="#FFFFFF" stroke="#F26522" stroke-width="6"/>
+                        <polygon points="75,65 72,18 102,52" fill="#F26522" stroke="#1E1025" stroke-width="4"/>
+                        <polygon points="105,52 132,16 132,68" fill="#F26522" stroke="#1E1025" stroke-width="4"/>
+                        <path d="M72 60 Q100 42 132 62 Q142 88 122 105 Q100 112 76 102 Q58 95 52 86 Q64 78 72 60 Z" fill="#F26522" stroke="#1E1025" stroke-width="4"/>
+                        <path d="M54 87 Q76 86 92 98 Q106 106 120 100 Q102 114 76 104 Q60 98 54 87 Z" fill="#FFFFFF"/>
+                        <circle cx="52" cy="86" r="5" fill="#1E1025"/>
+                        <path d="M82 104 Q65 135 72 165 L132 165 Q138 130 120 102 Z" fill="#F26522" stroke="#1E1025" stroke-width="4"/>
+                        <path d="M86 115 Q102 145 116 115 Q112 148 101 155 Q90 148 86 115 Z" fill="#FFFFFF"/>
+                        <path d="M128 148 Q168 145 162 170 Q135 192 75 188 Q28 182 32 155 Q36 135 68 142 Q95 152 128 148 Z" fill="#F26522" stroke="#1E1025" stroke-width="4"/>
+                    </svg>
+                </div>
+                <div>
+                    <span class="block font-bold text-[#007A33] text-base">Santa Cruz de la Sierra</span>
+                    <span class="block text-xs font-semibold text-gray-700">Diseñado por: Martha Eliana Diego Ticona</span>
+                </div>
+            </div>
+            <p class="text-gray-600 text-sm text-center sm:text-right">
+                ¡Viva Santa Cruz! • Tierra camba de tradición, progreso y hospitalidad.
+            </p>
+        </div>
+        <!-- Franja verde final para completar el patrón Verde - Blanco - Verde -->
+        <div class="h-4 w-full bg-[#007A33]"></div>
+    </footer>
+
+    <!-- Lógica JavaScript para interactividad -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>
